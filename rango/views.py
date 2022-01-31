@@ -5,9 +5,10 @@ def index(request):
     # constructing a dictionary to pass to the template engine as its context
     context_dict = {'boldmessage': 'Crunchy, creamy, cookie, candy, cupcake!'}
 
-    # return a rendered response to the client
+    # return a rendered httpresponse to the client
     return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    return HttpResponse('Rango says here is the about page. <a href="/rango/">Index</a>')
+    context_dict = {'boldmessage': 'This tutorial has been put together by Reetu V'}
+    return render(request, 'rango/about.html', context=context_dict)
 
