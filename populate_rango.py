@@ -42,7 +42,7 @@ def populate():
     # add more categories or pages, add to the dictionaries above
 
     # adds each category and associated pages
-    for cat_data in cats.items():
+    for cat_data in cats:
         c = add_cat(cat_data['name'], cat_data['views'], cat_data['likes'])
         for p in cat_data['pages']:
             add_page(c, p['title'], p['url'])
